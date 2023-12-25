@@ -36,7 +36,6 @@ The predictive analysis of the data has been performed with the help of a machin
 12.	NC2.5
 13.	CNT
 14.	Fire Alarm
-####Model Testing and Evaluation
-![image](https://github.com/Mydah-Nasir/Smart-Home-IoT-Project/assets/77966399/bdb0b087-94e0-4434-9796-cb3090c327ac)
+### Model Testing and Evaluation
 ![image](https://github.com/Mydah-Nasir/Smart-Home-IoT-Project/assets/77966399/b41bd67a-7e84-4ce5-98dc-a304a5e79fed)
 
