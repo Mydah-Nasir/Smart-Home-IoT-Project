@@ -20,7 +20,6 @@
 ![image](https://github.com/Mydah-Nasir/Smart-Home-IoT-Project/assets/77966399/766107b1-bfd5-49cf-8b23-ed5caff40ebe)
 
 ## Smoke Detection/fire Alarm Dashboard
-###Predictive Analysis
 The predictive analysis of the data has been performed with the help of a machine learning algorithm. We have used the smoke detection dataset to perform our predictive analysis using XG Boost Model. Our trained model is capable of predicting whether smoke has been detected or not based on different feature values. Following features are present in this dataset:
 1.	Temperature
 2.	Humidity
