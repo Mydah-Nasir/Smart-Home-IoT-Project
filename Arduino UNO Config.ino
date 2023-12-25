@@ -69,7 +69,71 @@ void setup() {
 
 void loop()
 {
+  //...
+  //...
+  //Object Detection
+  //...
+  //...
+  long duration, distance;
   
+  // Triggering the ultrasonic sensor to measure distance
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  
+  // Calculate distance in centimeters
+  distance = microsecondsToCentimeters(duration);
+
+  Serial.print("Detected Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+  
+  if (distance < closingThreshold) {
+    Serial.println("Object/Person Detected at Door.");
+  } else {
+    Serial.println("Nothing Detected at Door.");
+  }
+   //...
+  //...
+  // Temperature Detection
+  //...
+  //...
+  
+  // Read temperature sensor
+  int tempValue = analogRead(temp);
+  float voltage = tempValue * (5.0 / 1023.0);
+  float Temperature = (voltage - 0.5) * 100.0; 
+  
+  Serial.print("temperature: ");
+  Serial.print(Temperature);
+  Serial.println(" C");
+  
+  lcd.setCursor(5,0);
+  lcd.print(Temperature);
+  lcd.print("C"); 
+  
+  if (Temperature > tempThreshold){
+    Serial.println("Temperature is High");
+    digitalWrite(buzzer, HIGH); 
+    lcd.print(" HIGH");
+  }
+  else if (Temperature < 0)
+  {
+    Serial.println("Temperature is Freezing");
+    digitalWrite(buzzer, HIGH); 
+    lcd.print(" LOW");
+  }
+  else
+  {
+    Serial.println("Temperature is Fine");
+    digitalWrite(buzzer, LOW); 
+    lcd.print(" FINE");
+  }
+   
   //...
   //...
   //Gas Detection
